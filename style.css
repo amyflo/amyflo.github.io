@@ -175,10 +175,10 @@ text-align: left;
 
 @media only screen and (max-width: 1000px){
   h1{
-    font-size: 4rem;
+    font-size: 2em;
   }
   p{
-    font-size: 2rem;
+    font-size: 0.5em;
   }
   body{
     font-size: 4em;
