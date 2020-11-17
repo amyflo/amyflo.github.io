@@ -181,6 +181,9 @@ text-align: left;
   .p2{
     font-size: 0.5em;
   }
+  p{
+    font-size: 1em;
+  }
 }
 
 html, body {
