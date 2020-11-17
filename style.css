@@ -3,6 +3,7 @@ overflow: hidden;
 position: fixed;
 width: 100%;
 z-index: 1;
+margin: 10px;
 }
 
 .navbar a {
@@ -172,12 +173,24 @@ text-align: left;
   
 /* Below here is styling, not important for the actual example, just to make it look nice. No need to look down here! */
 
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 400px){
   h1{
-    font-size: 3em;
+    font-size: 3rem;
   }
   p{
-    font-size: 1.5em;
+    font-size: 2em;
+  }
+}
+
+@media only screen and (max-width: 1000px){
+  h1{
+    font-size: 4rem;
+  }
+  p{
+    font-size: 2rem;
+  }
+  body{
+    font-size: 4em;
   }
 }
 
