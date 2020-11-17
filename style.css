@@ -177,10 +177,10 @@ text-align: left;
   h1{
     font-size: 2em;
   }
-  p{
-    font-size: 0.5em;
-  }
   body{
+    font-size: 4em;
+  }
+  p{
     font-size: 4em;
   }
   .p2{
