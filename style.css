@@ -3,6 +3,7 @@ overflow: hidden;
 position: fixed;
 width: 100%;
 z-index: 1;
+margin-left: 5%;
 }
 
 .navbar a {
@@ -65,10 +66,9 @@ h5{
   font-size: 2em;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px;
   text-align: left;
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 h6{
@@ -171,6 +171,7 @@ p{
   
 html, body {
   height: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
   background-color: #F2F7FF;
@@ -210,7 +211,7 @@ html, body {
   clear: both;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 767px) {
 
   h1{
     font-size: 1.75em;
@@ -243,22 +244,35 @@ html, body {
   }
 
   .preview:hover {
-    transform: scale(1.0);
+    transform: none;
   }
 }
 
-@media screen and (min-width: 999px) and (max-width: 1024px) {
+@media screen and (width: 768px){
   .row{
     padding: 10px;
   }
   .preview{
-    margin-top: 10px;
-    margin-bottom: 10px;
     width: 100%;
+    margin-top: 30%;
   }
 
   .preview:hover {
-    transform: scale(1.0);
+    transform: none;
+  }
+}
+
+@media screen and (width: 1024px){
+  .row{
+    padding: 10px;
+  }
+  .preview{
+    width: 100%;
+    margin-top: 10%;
+  }
+
+  .preview:hover {
+    transform: none;
   }
 }
 
@@ -274,7 +288,6 @@ html, body {
   cursor: pointer;
   border-radius: 30px;
 }
-
 
 .preview {
   border-radius: 30px;
