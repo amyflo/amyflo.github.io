@@ -17,8 +17,9 @@ text-decoration: none;
 
 .navbar a:hover {
 color: black;
-font-size: 22px;
-}     
+transform: scale(1.25);
+transition: 0.3s
+}       
 
 body{
   font-family: Inter;
@@ -176,12 +177,6 @@ text-align: left;
 @media only screen and (max-width: 1000px){
   h1{
     font-size: 2em;
-  }
-  body{
-    font-size: 4em;
-  }
-  p{
-    font-size: 4em;
   }
   .p2{
     font-size: 0.5em;
