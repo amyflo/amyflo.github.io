@@ -93,12 +93,6 @@ text-align: left;
 }
 
 p{
-font-style: normal;
-font-weight: 400;
-text-align: left;
-}
-
-.p2{
   font-family: Inter;
   font-size: 0.8em;
   font-style: normal;
@@ -178,11 +172,8 @@ text-align: left;
   h1{
     font-size: 2em;
   }
-  .p2{
+  .p{
     font-size: 0.5em;
-  }
-  p{
-    font-size: 1em;
   }
 }
 
