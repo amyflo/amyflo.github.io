@@ -241,6 +241,10 @@ html, body {
     width: 100%;
     margin-bottom: 10px;
   }
+
+  .preview:hover {
+    transform: scale(1.0);
+  }
 }
 
 @media screen and (min-width: 999px) and (max-width: 1024px) {
@@ -251,6 +255,10 @@ html, body {
     margin-top: 10px;
     margin-bottom: 10px;
     width: 100%;
+  }
+
+  .preview:hover {
+    transform: scale(1.0);
   }
 }
 
