@@ -21,6 +21,10 @@
     font-size: 17px;
   }
 
+  section{
+     height: 100%;
+  }
+
 body{
     font-family: Inter;
     color: #2E3A59;
