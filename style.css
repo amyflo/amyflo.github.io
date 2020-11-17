@@ -1,0 +1,118 @@
+body{
+    font-family: Inter;
+    opacity: 87%;
+}
+
+h1{
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 112px;
+    letter-spacing: -1.5px;
+    text-align: left;
+}
+
+h2{
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 72px;
+    text-align: left;
+}
+
+h3{
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 56px;
+    text-align: left;
+}
+
+h4{
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 38px;
+    text-align: left;
+}
+
+h5{
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+
+}
+
+h6{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+}
+
+.subtitle1{
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+.subtitle2{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+}
+
+p{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+.p2{
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    text-align: left;
+}
+
+.button-text{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 1.25px;
+    text-align: left;
+}
+
+.caption{
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: left;  
+}
+
+.overline{
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 1.5px;
+    text-align: left;
+}
+
+
+
