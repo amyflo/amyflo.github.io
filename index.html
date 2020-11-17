@@ -1,37 +1,71 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-    
-  <head>
-    <meta charset="utf-8">
-    <title>Amy Lo Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
-  </head>
-  <body>
-      <section>
-        <h1> Hello</h1>
-        <h2> Hello</h2>
-        <h3> Hello</h3>
-      </section>
-      <section>
-        <h4> Hello</h4>
-        <h5> Hello</h5>
-        <h6> Hello</h6>
-      </section>
-      <section>
-          
-      </section>
-    
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-    <div class="parent">
-        <li id="colorful">This is Section 1</li>
-        <li>This is Section 2</li>
-        <li id="colorful">This is Section 3</li>
-        <li>This is Section 4</li>
-        <li id="colorful">This is Section 5</li>
-        <li>This is Section 6</li>
-        <li id="colorful">This is Section 7</li>
-  </div>
-  
-  </body>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Vertical navigation dots - fullPage.js</title>
+	<meta name="author" content="Amy Lo" />
+	<meta name="description" content="fullPage full-screen navigation and sections control menu." />
+	<meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,navigation,control arrows, dots" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="/dist/fullpage.css" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Inter">
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+</head>
+<body>
+
+	<div class="navbar">
+		<a href="#home">Home</a>
+		<a href="#news">News</a>
+		<a href="#contact">Contact</a>
+	  </div>
+	  
+	  <div class="main">
+		<div id="fullpage">
+			<div class="section" id="section0">
+				<h1 style="text-align: center;">I like to go <br>with the flow.</h1>
+				<p style="text-align: center;">This is a description about me.</p>
+				<div class="icons" style="text-align: center;">
+					<img src="assets/icons/basic/mail.svg" alt="Email" width="30" height="30">
+					<img src="assets/icons/brand/instagram.svg" alt="Email" width="29" height="30">
+					<img src="assets/icons/brand/LinkedIn.svg" alt="Email" width="25" height="30">
+				</div>
+			</div>
+			<div class="section" id="section1">
+				<div class="intro">
+					<h1>Navigation dots</h1>
+					<p>An easy and beautiful way to navigate throw the sections</p>
+				</div>
+			</div>
+			<div class="section" id="section2">
+				<div class="intro">
+					<h1>Enjoy it</h1>
+				</div>
+			</div>
+		</div>
+		
+	  </div>
+
+<script type="text/javascript" src="/dist/fullpage.js"></script>
+<script type="text/javascript" src="/script.js"></script>
+
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        anchors: ['firstPage', 'secondPage', '3rdPage'],
+        navigation: true,
+        navigationPosition: 'right',
+        navigationTooltips: ['First page', 'Second page', 'Third and last page']
+    });
+</script>
+
+</body>
 </html>
