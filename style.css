@@ -7,6 +7,7 @@ width: 100%;
 z-index: 1;
 }
 
+
 .navbar a {
 float: left;
 display: block;
@@ -21,8 +22,9 @@ color: black;
 font-size: 17px;
 }     
 
-section{
-height: 1500px;
+.full-height {
+    height: 100%;
+    background: yellow;
 }
 
 body{
