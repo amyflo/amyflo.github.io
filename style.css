@@ -30,7 +30,7 @@ body{
 h1{
   font-size: 4em;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   text-align: left;
   margin-bottom: 0px;
 }
@@ -57,6 +57,7 @@ h4{
   font-weight: 300;
   line-height: 38px;
   text-align: left;
+  margin: 0;
 }
 
 h5{
@@ -193,12 +194,54 @@ html, body {
 #carousel > div {
   min-width: 100%;
   min-height: 100%;
-  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: #2E3A59;
 }
 
+.icon{
+  width: 30px;
+  height: 30px;
+}
+
+.icon:hover{
+  transform: scale(1.25);
+  transition: 0.3s;
+}
 
 
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px) {
+  thead th:not(:first-child) {
+  display: none;
+  }
+
+  td, th {
+  display: block;
+  }
+
+  td[data-th]:before  {
+  content: attr(data-th);
+  }
+  table{
+    width: 80vh;
+  }
+}
+  
+.image-preview{
+  width: 400px;
+  height: 400px;
+}
