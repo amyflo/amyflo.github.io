@@ -1,13 +1,17 @@
-/* .navbar {
+.navbar {
 overflow: hidden;
-background-color: #F2F7FF;
 position: fixed;
 top: 0;
 width: 100%;
 z-index: 1;
 }
 
-
+html {
+	font-family: sans-serif;
+	scroll-snap-type: mandatory;
+	scroll-snap-points-y: repeat(100vh);
+	scroll-snap-type: y mandatory;
+}
 
 .navbar a {
 float: left;
@@ -23,15 +27,11 @@ color: black;
 font-size: 17px;
 }     
 
-.full-height {
-    height: 100%;
-    background: yellow;
-}
-
 body{
     font-family: Inter;
     color: #2E3A59;
     background: #F2F7FF;
+    scroll-behavior: smooth;
 }
 
 h1{
@@ -144,8 +144,93 @@ p{
     text-align: left;
 }
 
+<<<<<<< Updated upstream
+section{
+    height: 100vh;
+    scroll-snap-align: start;
+    vertical-align: middle;
+    scroll-snap-type: mandatory;
+    -webkit-scroll-snap-type: mandatory;
+    -webkit-scroll-snap-points-x: repeat(100%);
+} */
 
- */
+#carousel {
+    /* Ensure that the contents flow horizontally */
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* 2018 spec - For Safari 11, Chrome 69+ */
+  #carousel.snap {
+    scroll-snap-type: y mandatory;
+    -webkit-overflow-scrolling: touch; /* Needed to work on iOS Safari */
+  }
+  
+  #carousel.snap > div {
+    scroll-snap-align: center;
+  }
+  
+  #carousel.snap.vertical {
+    flex-direction: column;
+    scroll-snap-type: y mandatory;
+  }
+  
+  /* 2015 spec - For Firefox, Edge, IE */
+  #carousel.snap {
+    scroll-snap-type: mandatory;
+    -ms-scroll-snap-type: mandatory;
+    scroll-snap-points-x: repeat(100%);
+    -ms-scroll-snap-points-x: repeat(100%);
+  }
+  
+  #carousel.snap.vertical {
+    scroll-snap-points-x: initial;
+    -ms-scroll-snap-points-x: initial;
+    scroll-snap-points-y: repeat(100%);
+    -ms-scroll-snap-points-y: repeat(100%);
+  }
+  
+  /* Below here is styling, not important for the actual example, just to make it look nice. No need to look down here! */
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #carousel > div {
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  #carousel-1 {
+    background-color: #e34747;
+  }
+  
+  #carousel-2 {
+    background-color: #5ab92c;
+  }
+  
+  #carousel-3 {
+    background-color: #226de2;
+  }
+=======
+
+
 
  html,
 body {
@@ -155,18 +240,4 @@ body {
 section {
   height: 100vh;
 }
-section:nth-child(1) {
-  background: lightblue;
-}
-section:nth-child(2) {
-  background: lightgreen;
-}
-section:nth-child(3) {
-  background: purple;
-}
-section:nth-child(4) {
-  background: red;
-}
-section:nth-child(5) {
-  background: yellow;
-}
+>>>>>>> Stashed changes
