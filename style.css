@@ -172,7 +172,13 @@ text-align: left;
   
 /* Below here is styling, not important for the actual example, just to make it look nice. No need to look down here! */
 
-@media only screen and (min-width: 300px) and (max-width: 1000px){
+@media only screen and (max-width: 1000px){
+  h1{
+    font-size: 2em;
+  }
+  p{
+    font-size: 1em;
+  }
 }
 
 html, body {
