@@ -174,10 +174,10 @@ text-align: left;
 
 @media only screen and (min-width: 300px) and (max-width: 500px){
   h1{
-    font-size: 3.5em;
+    font-size: 1em;
   }
   body{
-    font-size: 2em;
+    font-size: 1em;
   }
 }
 
