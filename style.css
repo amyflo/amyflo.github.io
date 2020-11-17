@@ -35,12 +35,12 @@ body{
 }
 
 h1{
-    font-size: 72px;
-    font-style: normal;
-    font-weight: 500;
-    text-align: left;
-    color: #2E3A59;
-    margin-bottom: 0px;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 500;
+  text-align: left;
+  color: #2E3A59;
+  margin-bottom: 0px;
 }
 
 h2{
@@ -144,16 +144,6 @@ p{
     text-align: left;
 }
 
-<<<<<<< Updated upstream
-section{
-    height: 100vh;
-    scroll-snap-align: start;
-    vertical-align: middle;
-    scroll-snap-type: mandatory;
-    -webkit-scroll-snap-type: mandatory;
-    -webkit-scroll-snap-points-x: repeat(100%);
-} */
-
 #carousel {
     /* Ensure that the contents flow horizontally */
     overflow-x: auto;
@@ -228,7 +218,6 @@ section{
   #carousel-3 {
     background-color: #226de2;
   }
-=======
 
 
 
@@ -240,4 +229,3 @@ body {
 section {
   height: 100vh;
 }
->>>>>>> Stashed changes
