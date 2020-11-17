@@ -1,29 +1,29 @@
 .navbar {
-    overflow: hidden;
-    background-color: #F2F7FF;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-  }
-  
-  .navbar a {
-    float: left;
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
-    color: #2E3A59;
-    text-decoration: none;
-  }
-  
-  .navbar a:hover {
-    color: black;
-    font-size: 17px;
-  }
+overflow: hidden;
+background-color: #F2F7FF;
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 1;
+}
 
-  section{
-     height: 100%;
-  }
+.navbar a {
+float: left;
+display: block;
+text-align: center;
+padding: 14px 16px;
+color: #2E3A59;
+text-decoration: none;
+}
+
+.navbar a:hover {
+color: black;
+font-size: 17px;
+}     
+
+section{
+height: 1500px;
+}
 
 body{
     font-family: Inter;
