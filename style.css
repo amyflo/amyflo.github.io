@@ -1,15 +1,39 @@
+.navbar {
+    overflow: hidden;
+    background-color: #F2F7FF;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    color: #2E3A59;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    color: black;
+    font-size: 17px;
+  }
+
 body{
     font-family: Inter;
-    opacity: 87%;
+    color: #2E3A59;
+    background: #F2F7FF;
 }
 
 h1{
-    font-size: 96px;
+    font-size: 72px;
     font-style: normal;
     font-weight: 500;
-    line-height: 112px;
-    letter-spacing: -1.5px;
     text-align: left;
+    color: #2E3A59;
+    margin-bottom: 0px;
 }
 
 h2{
@@ -74,7 +98,6 @@ p{
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 24px;
     text-align: left;
 }
 
