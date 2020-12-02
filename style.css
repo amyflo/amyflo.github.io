@@ -1,14 +1,93 @@
 body{
-  font-family: p22-underground, sans-serif;
+  font-family: aktiv-grotesk-extended,sans-serif;
   font-style: normal;
+  background-color: black;
+  color: white
+  /* background: linear-gradient(-45deg, #ffffff, #fdf8e1, #F7D6E0, #cddafd);
+	background-size: 400%;
+  animation: gradient 10s ease infinite; */
 }
 
 h1{
+  font-family: aktiv-grotesk-extended,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h2{
   font-weight: 600;
 }
 
-h1{
-  font-family: p22-underground, sans-serif;
+h3{
+  font-weight: 300;
+}
+
+h4{
   font-weight: 600;
-  font-style: normal;
+}
+
+h5{
+  font-weight: 600;
+}
+
+.navbar-collapse.collapse.in {
+  display: block!important;
+}
+
+@media screen and (min-width: 992px){
+  .cover-img{
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    transition: 0.3s ease;
+  }
+
+}
+.cover-img{
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+.cover-img:hover{
+  -webkit-filter: none;
+  filter: none;
+  width: 100%;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.card{
+  border: none;
+  background-color: black;
+}
+
+
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .grid-sizer,
+.grid-item { width: 100%; }
+ }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .grid-sizer,
+.grid-item { width: 50%; }
+ }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {.grid-sizer,
+  .grid-item { width: 33%; }}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {.grid-sizer,
+  .grid-item { width: 25%; }}
+
+.button{
+  background-color: black;
+  color: white;
+  border: none;
+  font-weight: 600;
+}
+
+.grid-item{
+  padding: 30px;
 }
