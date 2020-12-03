@@ -10,18 +10,27 @@
 	}
 }
 
-html{
-  background: linear-gradient(-45deg, #000000,#14123d, #2b1d94, #04007a);
-  background-size: 400%;
-  animation: gradient 10s ease infinite;
-  margin: 0;
-}
+@keyframes fadeInAnimation { 
+  0% { 
+      opacity: 0; 
+  } 
+  100% { 
+      opacity: 1; 
+   } 
+} 
+
 body{
   font-family: aktiv-grotesk-extended,sans-serif;
   font-style: normal;
   color: white;
-  background: transparent;
+  overflow: auto;
+  background-image: linear-gradient(180deg, #000000, #0e1487);
+  min-height: 100vh;
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1; 
+  animation-fill-mode: forwards; 
 }
+
 
 h1{
   font-family: aktiv-grotesk-extended,sans-serif;
