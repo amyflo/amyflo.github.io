@@ -73,7 +73,7 @@ var text =
 "takes notes on literally everything.",
 "maximizes her use of Post-it notes.",
 "ran a social media campaign.",
-"raised over $37k in donations through Instagram.", 
+"raised ~$37k in donations through Instagram.", 
 "has never seen snow fall."];
 var counter = 0;
 var elem = document.getElementById("changeText");
