@@ -1,12 +1,50 @@
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes fadeInAnimation { 
+  0% { 
+      opacity: 0; 
+  } 
+  100% { 
+      opacity: 1; 
+   } 
+} 
+
 body{
   font-family: aktiv-grotesk-extended,sans-serif;
   font-style: normal;
-  background-color: black;
-  color: white
-  /* background: linear-gradient(-45deg, #ffffff, #fdf8e1, #F7D6E0, #cddafd);
-	background-size: 400%;
-  animation: gradient 10s ease infinite; */
+  color: white;
+  background:#3855b4;
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1; 
+  animation-fill-mode: forwards; 
 }
+
+main{
+  background: linear-gradient(-45deg, #000000,#14123d, #000000, #04007a);
+  background-size: 400%;
+  min-height: 100vh;
+  animation: gradient 10s ease infinite;
+
+}
+
+@keyframes fadeInAnimation { 
+  0% { 
+      opacity: 0; 
+  } 
+  100% { 
+      opacity: 1; 
+   } 
+} 
 
 h1{
   font-family: aktiv-grotesk-extended,sans-serif;
@@ -34,60 +72,154 @@ h5{
   display: block!important;
 }
 
-@media screen and (min-width: 992px){
-  .cover-img{
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
-    transition: 0.3s ease;
-  }
-
-}
-.cover-img{
-  width: 100%;
-  transition: 0.3s ease;
-}
-
-.cover-img:hover{
-  -webkit-filter: none;
-  filter: none;
-  width: 100%;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
 .card{
   border: none;
-  background-color: black;
+  background-color: transparent;
 }
 
+card-img{
+  width: 100%;
+}
+
+@media(min-width: 0px){
+  h1{
+    font-size: 5vh;
+  }
+  #changeTextMobile{
+    display: block;
+    font-size: 5vh;
+  }
+  #changeText{
+    font-size: 5vh;
+    display:none;
+  }
+ }
 
  /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .grid-sizer,
-.grid-item { width: 100%; }
+  .grid-item { width: 100%; }
+  h1{
+    font-size: normal;
+  }
  }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .grid-sizer,
-.grid-item { width: 50%; }
+  .grid-item { width: 50%; }
+  #name{
+    font-size: 8vh;
+  }
+  #changeTextMobile{
+    display: none;
+  }
+  #changeText{
+    font-size: 5vh;
+    display:block;
+  }
  }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {.grid-sizer,
-  .grid-item { width: 33%; }}
+  .grid-item { width: 33%; }
+
+}
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {.grid-sizer,
-  .grid-item { width: 25%; }}
+  .grid-item { width: 25%; }
+}
+
+.navbar-brand{
+  font-weight: 600;
+  font-display: 400;
+}
+
+.navbar-brand:hover{
+  opacity: 50%;
+  transition: 0.2s;
+}
+
 
 .button{
-  background-color: black;
+  background-color: transparent;
   color: white;
   border: none;
+  font-size: 3vh;
   font-weight: 600;
+  text-transform: uppercase;
+  margin-right: 20px;
+  display: block;
+}
+
+.button:hover{
+  opacity: 50%;
+  transition: 0.2s;
+}
+
+.button.is-checked {
+  color: #3855b4;
 }
 
 .grid-item{
-  padding: 30px;
+  padding: 20px;
+}
+
+.grid-item img{
+  max-width: 100%;
+  box-shadow:  4px 4px 60px 10px #8e8a8a30;
+}
+
+.grid-item img:hover{
+  box-shadow:  4px 4px 60px 10px #8e8a8a60;
+}
+
+.nav-link, .navbar-brand{
+  text-transform: uppercase;
+}
+
+.footer{
+  background: transparent;
+}
+
+.nav-link{
+  font-weight: 300 !important;
+}
+a {
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: background-size cubic-bezier(0,.5,0,1) 0.3s;
+  font-weight: bold;
+  color: #3855b4;
+ }
+ a:hover, a:focus {
+  opacity: 50%;
+  text-decoration: none;
+  background-size: 100% 1px;
+ }
+
+ .leftgear{  
+  animation-name: spin;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  background-image: none;
+}
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}
+
+.leftgear:hover{
+  transition: 3s;
+  transform: scale(1.10);
 }
