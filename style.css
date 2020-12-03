@@ -174,10 +174,10 @@ card-img{
 }
 a {
   text-decoration: none;
-  background-image: linear-gradient(currentColor, currentColor);
+  background-image: linear-gradient(#3392fb, #3392fb);
   background-position: 0% 100%;
   background-repeat: no-repeat;
-  background-size: 0% 1px;
+  background-size: 0% 2px;
   transition: background-size cubic-bezier(0,.5,0,1) 0.3s;
   font-weight: bold;
   color: #3392fb;
@@ -185,7 +185,7 @@ a {
  a:hover, a:focus {
   opacity: 50%;
   text-decoration: none;
-  background-size: 100% 1px;
+  background-size: 100% 2px;
  }
 
  .leftgear{  
