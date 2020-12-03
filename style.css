@@ -10,41 +10,18 @@
 	}
 }
 
-@keyframes fadeInAnimation { 
-  0% { 
-      opacity: 0; 
-  } 
-  100% { 
-      opacity: 1; 
-   } 
-} 
-
+html{
+  background: linear-gradient(-45deg, #000000,#14123d, #2b1d94, #04007a);
+  background-size: 400%;
+  animation: gradient 10s ease infinite;
+  margin: 0;
+}
 body{
   font-family: aktiv-grotesk-extended,sans-serif;
   font-style: normal;
   color: white;
-  background:#3855b4;
-  animation: fadeInAnimation ease 2s;
-  animation-iteration-count: 1; 
-  animation-fill-mode: forwards; 
+  background: transparent;
 }
-
-main{
-  background: linear-gradient(-45deg, #000000,#14123d, #000000, #04007a);
-  background-size: 400%;
-  min-height: 100vh;
-  animation: gradient 10s ease infinite;
-
-}
-
-@keyframes fadeInAnimation { 
-  0% { 
-      opacity: 0; 
-  } 
-  100% { 
-      opacity: 1; 
-   } 
-} 
 
 h1{
   font-family: aktiv-grotesk-extended,sans-serif;
@@ -118,6 +95,9 @@ card-img{
     font-size: 5vh;
     display:block;
   }
+  .button-group{
+    position: fixed;
+  }
  }
 
 /* Large devices (desktops, 992px and up) */
@@ -128,7 +108,7 @@ card-img{
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {.grid-sizer,
-  .grid-item { width: 25%; }
+  .grid-item { width: 33%; }
 }
 
 .navbar-brand{
@@ -146,8 +126,6 @@ card-img{
   background-color: transparent;
   color: white;
   border: none;
-  font-size: 3vh;
-  font-weight: 600;
   text-transform: uppercase;
   margin-right: 20px;
   display: block;
@@ -159,11 +137,11 @@ card-img{
 }
 
 .button.is-checked {
-  color: #3855b4;
+  color:#3392fb;
 }
 
 .grid-item{
-  padding: 20px;
+  padding: 10px;
 }
 
 .grid-item img{
@@ -172,6 +150,14 @@ card-img{
 }
 
 .grid-item img:hover{
+  box-shadow:  4px 4px 60px 10px #8e8a8a60;
+}
+
+.card-img{
+  box-shadow:  4px 4px 60px 10px #8e8a8a30;
+}
+
+.card-img:hover{
   box-shadow:  4px 4px 60px 10px #8e8a8a60;
 }
 
@@ -194,7 +180,7 @@ a {
   background-size: 0% 1px;
   transition: background-size cubic-bezier(0,.5,0,1) 0.3s;
   font-weight: bold;
-  color: #3855b4;
+  color: #3392fb;
  }
  a:hover, a:focus {
   opacity: 50%;
