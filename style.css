@@ -77,7 +77,10 @@ card-img{
   }
   #changeText{
     font-size: 5vh;
-    display:none;
+    display:none !important;
+  }
+   #cursor{
+    display: none !important;
   }
  }
 
@@ -97,13 +100,6 @@ card-img{
   #name{
     font-size: 8vh;
   }
-  #changeTextMobile{
-    display: none;
-  }
-  #changeText{
-    font-size: 5vh;
-    display:block;
-  }
   .button-group{
     position: fixed;
   }
@@ -113,6 +109,16 @@ card-img{
 @media (min-width: 992px) {.grid-sizer,
   .grid-item { width: 33%; }
 
+  #changeTextMobile{
+    display: none;
+  }
+  #changeText{
+    font-size: 5vh;
+    display:inline-block !important;
+  }
+  #cursor{
+    display: inline-block !important;
+  }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -217,4 +223,28 @@ a {
 .leftgear:hover{
   transition: 3s;
   transform: scale(1.10);
+}
+
+#changeText {
+	display: inline-block;
+	vertical-align: middle;
+	letter-spacing: 2px;
+}
+
+#cursor {
+	display: inline-block;
+	vertical-align: middle;
+	width: 3px;
+	height: 57px;
+	background-color: #3392fb;
+	animation: blink .75s step-end infinite;
+}
+
+@keyframes blink {
+	from, to { 
+		background-color: transparent 
+	}
+	50% { 
+		background-color: #3392fb;
+	}
 }
