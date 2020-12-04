@@ -52,21 +52,20 @@ window.onload = function () {
     });
 }
 
-// List of sentences
-var _CONTENT = [
-"studies Product Design & Psychology.",
-"attends Stanford University (virtually).",
-"tells stories through user experience.",
+
+var text = 
+["studies Product Design and Psychology at Stanford.",
+"loves telling stories through user experience.",
 "wrote an essay about Peppa Pig before.", 
 "likes ketchup and salsa on her eggs.", 
 "taught herself how to code this website.",
 "loves planning surprise birthday parties.",
-"secretly writes bad poetry late at night.",
-"researches social psychology phenomena.",
+"writes bad poetry in the Notes app too much.",
+"researches social psychology from across the world.",
 "believes in the power of open data.",
-"prefers tea over coffee greatly.",
-"got lost biking to the d.School.",
-"puts Sriracha on everything.",
+"prefers tea over coffee.",
+"once got lost on her way biking to the d.School.",
+"puts Sriracha on everything (sometimes too much).",
 "learned how to bake pies from Youtube.",
 "can fold over 100 dumplings in an hour.",
 "loves going online shopping for deals.",
@@ -74,72 +73,17 @@ var _CONTENT = [
 "takes notes on literally everything.",
 "maximizes her use of Post-it notes.",
 "ran a social media campaign.",
-"raised ~$37k in donations via Instagram.", 
+"raised ~$37k in donations through Instagram.", 
 "has never seen snow fall."];
+var counter = 0;
+var elem = document.getElementById("changeText");
+var inst = setInterval(change, 3000);
 
-// Current sentence being processed
-var _PART = 0;
-
-// Character number of the current sentence being processed 
-var _PART_INDEX = 0;
-
-// Holds the handle returned from setInterval
-var _INTERVAL_VAL;
-
-// Element that holds the text
-var _ELEMENT = document.querySelector("#changeText");
-
-// Cursor element 
-var _CURSOR = document.querySelector("#cursor");
-
-
-    // Implements typing effect
-function Type() { 
-	// Get substring with 1 characater added
-	var text =  _CONTENT[_PART].substring(0, _PART_INDEX + 1);
-	_ELEMENT.innerHTML = text;
-	_PART_INDEX++;
-
-	// If full sentence has been displayed then start to delete the sentence after some time
-	if(text === _CONTENT[_PART]) {
-		// Hide the cursor
-		_CURSOR.style.display = 'none';
-
-		clearInterval(_INTERVAL_VAL);
-		setTimeout(function() {
-			_INTERVAL_VAL = setInterval(Delete, 50);
-		}, 1000);
-	}
+function change() {
+  elem.innerHTML = text[counter];
+  counter++;
+  if (counter >= text.length) {
+    counter = 0;
+    // clearInterval(inst); // uncomment this if you want to stop refreshing after one cycle
+  }
 }
-
-// Implements deleting effect
-function Delete() {
-	// Get substring with 1 characater deleted
-	var text =  _CONTENT[_PART].substring(0, _PART_INDEX - 1);
-	_ELEMENT.innerHTML = text;
-	_PART_INDEX--;
-
-	// If sentence has been deleted then start to display the next sentence
-	if(text === '') {
-		clearInterval(_INTERVAL_VAL);
-
-		// If current sentence was last then display the first one, else move to the next
-		if(_PART == (_CONTENT.length - 1))
-			_PART = 0;
-		else
-			_PART++;
-		
-		_PART_INDEX = 0;
-
-		// Start to display the next sentence after some time
-		setTimeout(function() {
-			_CURSOR.style.display = 'inline-block';
-			_INTERVAL_VAL = setInterval(Type, 100);
-		}, 200);
-	}
-}
-
-// Start the typing effect on load
-_INTERVAL_VAL = setInterval(Type, 100);
-    
-
