@@ -1,15 +1,3 @@
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
 @keyframes fadeInAnimation { 
   0% { 
       opacity: 0; 
@@ -19,10 +7,60 @@
    } 
 } 
 
+*{
+  cursor: none;
+}
+
+/*--Example 2--*/
+.your-cursor2 {
+	position: absolute;
+	background-color: black;
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	z-index: 1;
+	transition: 0.3s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity;
+	user-select: none;
+	pointer-events: none;
+	z-index: 10000;
+	transform: scale(1);
+}
+.your-cursor2.active {
+	opacity: 0.5;
+	transform: scale(0);
+}
+.your-cursor2.hovered {
+	opacity: 0.08;
+}
+
+.follow2 {
+	position: absolute;
+	background-color: rgba(174, 174, 174, 0.3);
+	width: 20px;
+	height: 20px;
+	border-radius: 100%;
+	z-index: 1;
+	transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity;
+	user-select: none;
+	pointer-events: none;
+	z-index: 10000;
+	transform: translate(5px, 5px);
+}
+.follow2.active {
+	opacity: 0.7;
+	transform: scale(3);
+}
+.follow2.hovered {
+	opacity: 0.08;
+}
+
 body{
-  font-family: aktiv-grotesk-extended,sans-serif;
   font-style: normal;
-  color: white;
+  font-family: aktiv-grotesk, sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 2em;
+  color: #5d5d5d;
   overflow: auto;
   background-image: linear-gradient(180deg, #000000, #0e1487);
   min-height: 100vh;
@@ -35,24 +73,39 @@ body{
 h1{
   font-family: aktiv-grotesk-extended,sans-serif;
   font-weight: 700;
-  font-style: normal;
+  font-size: 2em;
+  color: #303030;
 }
 
 h2{
-  font-weight: 600;
+  font-family: aktiv-grotesk-extended,sans-serif;
+  font-size: 1.5em;
+  color: #3b3b3b;
 }
 
 h3{
-  font-weight: 300;
+  font-family: aktiv-grotesk-extended,sans-serif;
+  font-size: 1.25em;
+  color: #4c4c4c;
 }
 
-h4{
-  font-weight: 600;
+blockquote{
+  font-family: aktiv-grotesk-extended,sans-serif;
+  border-left: 4px solid #ccc;
+  margin: 1em 10px;
+  padding: 0.5em 1em;
 }
 
-h5{
-  font-weight: 300;
-  text-transform: uppercase;
+blockquote:before {
+  color: #ccc;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+mark{
+  background-color: #3392fb30;
 }
 
 .navbar-collapse.collapse.in {
@@ -70,9 +123,6 @@ card-img{
 }
 
 @media(min-width: 0px){
-  h1{
-    font-size: 5vh;
-  }
   #changeTextMobile{
     display: block;
     font-size: 5vh;
@@ -90,9 +140,6 @@ card-img{
 @media (min-width: 576px) {
   .grid-sizer,
   .grid-item { width: 100%; }
-  h1{
-    font-size: normal;
-  }
  }
 
 /* Medium devices (tablets, 768px and up) */
@@ -208,6 +255,7 @@ a {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   background-image: none;
+  color: white!important;
 }
 
 @keyframes spin {
@@ -267,4 +315,32 @@ a {
   opacity: 1;
   transition: 0.3s;
   transform: scale(1);
+}
+
+.center{
+  text-align: center;
+}
+
+
+
+.accordioncard{
+  text-decoration: none !important;
+  background:  white;
+}
+
+.btn-link{
+  text-decoration: none !important;
+  color: #5d5d5d;
+}
+
+.btn-link:hover{
+  text-decoration: none !important;
+  color: #5d5d5d40;
+}
+
+section{
+  margin-top: 30px;
+}
+.center{
+  text-align: center;
 }
