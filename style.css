@@ -7,10 +7,15 @@
    } 
 } 
 
-/* Cursor */
-*{
-  cursor: none;
+.fadeInAnimation {
+  -webkit-animation-name: fadeInAnimation;
+  -webkit-animation-duration: 1s;
+  animation-name: fadeInAnimation;
+  animation-duration: 1s;
+  text-align: left;
 }
+
+/* Cursor */
 .your-cursor2 {
 	position: absolute;
 	background-color: white;
@@ -73,6 +78,16 @@ body{
   animation-fill-mode: forwards; 
 }
 
+#loading {
+  display: none;
+}
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+}
+
 h1{
   font-family: aktiv-grotesk-extended,sans-serif;
   font-weight: 700;
@@ -131,7 +146,7 @@ mark{
 }
 .nav-link, .navbar-brand{
   text-transform: uppercase;
-  font-weight: 300 !important;
+  font-weight: 100 !important;
   font-family: aktiv-grotesk-extended,sans-serif;
 }
 
@@ -171,19 +186,13 @@ card-img{
     display: none;
   }
  }
- /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-  .grid-sizer,
-  .grid-item { width: 100%; }
- }
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .grid-sizer{ width: 25%; }
-  .grid-item{
-    width: 33%;
-  }
   .button-group{
     position: fixed;
+  }
+  *{
+    cursor: none;
   }
  }
 /* Large devices (desktops, 992px and up) */
@@ -209,7 +218,7 @@ card-img{
   .follow2.hovered {
     display: block;
   }
-  .grid-item { width: 33%; }
+  
 
   #changeTextMobile{
     display: none;
@@ -220,10 +229,6 @@ card-img{
   #cursor{
     display: inline-block !important;
   }
-}
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {.grid-sizer,
-  .grid-item { width: 33%; }
 }
 
 /* Button */
@@ -243,6 +248,13 @@ card-img{
 }
 .nav-button.is-checked {
   color:#F2CD5D;
+}
+
+@media (max-width: 768px) {
+  nav.navbar {
+    background: #151515;
+    z-index: 1;
+  }
 }
 
 /* Button*/
@@ -267,11 +279,7 @@ card-img{
   transition: 0.3s;
 }
 
-/* Grid Item */
-.grid-item{
-  z-index: 3;
-  
-}
+
 .grid-item img{
   max-width: 100%;
 }
@@ -422,17 +430,14 @@ main{
 
 .image-shrink{
   width: 100%;
-  filter: grayscale(100%);
-  opacity: 30%;
-  transition: 1s;
+  transition: 0.3s;
 }
 
 
 .image-shrink:hover{
-  padding: 20px;
-  transition: 1s;
+  padding: 10px;
+  transition: 0.3s;
   filter: none;
-  opacity: 100%;
 }
 
 .text-muted{
@@ -463,6 +468,7 @@ hr{
 
 .icon{
   width: 20px;
+  margin: 0px 10px;
 }
 
 .dot {
