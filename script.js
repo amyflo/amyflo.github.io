@@ -3,7 +3,7 @@ var selectedCategory;
 $('.carousel').carousel()
   
 window.onload = function () {
-    var $grid = $('.grid').isotope({
+    var $grid = $('#grid').isotope({
         itemSelector: '.grid-item',
         percentPosition: true,
         masonry: {
@@ -17,7 +17,7 @@ window.onload = function () {
     });
     var $items = $('.grid').find('.grid-item');
 
-    $('.sort-button-group').on( 'click', '.button', function() {
+    $('.sort-button-group').on( 'click', '.nav-button', function() {
     // set selectedCategory
     selectedCategory = $( this ).attr('data-category');
     if ( selectedCategory == 'all' ) {
@@ -144,7 +144,7 @@ function Delete() {
 // Start the typing effect on load
 _INTERVAL_VAL = setInterval(Type, 100);
     
-
+// Custom Mouse
 var cursor = $(".your-cursor2"),
 	follower = $(".follow2");
 
@@ -189,3 +189,68 @@ $("a").on("mouseleave", function() {
 	cursor.removeClass("active");
 	follower.removeClass("active");
 });
+
+// Accordion
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+
+//Get the button
+var backToTop = document.getElementById("backToTop");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    backToTop.style.display = "block";
+  } else {
+    backToTop.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+$(function() {
+    var rotation = 0, 
+        scrollLoc = $(document).scrollTop();
+    $(window).scroll(function() {
+        var newLoc = $(document).scrollTop();
+        var diff = scrollLoc - newLoc;
+        rotation += diff, scrollLoc = newLoc;
+        var rotationStr = "rotate(" + rotation + "deg)";
+        $(".leftgear").css({
+            "-webkit-transform": rotationStr,
+            "-moz-transform": rotationStr,
+            "transform": rotationStr
+        });
+    });
+})
+
+
+function mouseIn() {
+	$('.img').addClass('show');
+  }
+  
+  function mouseOut() {
+	$('.img').removeClass('show');
+  }
+  
+  $('.hover-me').hover(mouseIn, mouseOut);
+
+  
